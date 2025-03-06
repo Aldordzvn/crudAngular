@@ -1,0 +1,12 @@
+@import '../styles.scss';
+
+.container_app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container_components{
+    background-color: $dark_color;
+}

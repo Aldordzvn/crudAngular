@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css/normalize';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+$main_color: #00eeff;
+$text_color: #b9f9ff;
+$button_color: #73f3ff;
+$dark_color: #0a0f0f;
+$card_surface: #232626;
+$aside_surface: #232626;
+$blanco: #fff;
+$border: #535555;
+$bg_blur: #5c9298;
+
+// FUENTES
+$main_font: "Oswald", sans-serif;
+
+// CAMBIOS GLOBALES
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    // position: relative;
+    // // display: flex;
+    // // flex-direction: column;
+    // height: 100vh;
+    // // justify-content: space-between;
+    background-color: $bg_blur;
+    font-family: $main_font;
+}
+
+*,*:before, *::after{
+    box-sizing: inherit;
+}
