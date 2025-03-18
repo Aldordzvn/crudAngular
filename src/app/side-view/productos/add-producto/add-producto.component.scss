@@ -61,7 +61,6 @@
 .btns_container{
     display: flex;
     flex-direction: column;
-    margin: 4rem 0 0 0;
     padding: 0 5rem;
     gap: 1rem;
 }
@@ -85,5 +84,14 @@
             background-color: $rojo;
         }
     }
+}
+
+.txtarea{
+    font-size: 1.3rem;
+    padding: 1rem;
+    height: 7rem;
+    resize: none;
+    border: 1px solid $border;
+    border-radius: 8px;
 }
 
