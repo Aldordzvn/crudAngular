@@ -1,0 +1,68 @@
+@import '../../../../styles.scss';
+
+.eliminar_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(10, 15, 15);
+    background: linear-gradient(90deg, rgba(10, 15, 15, 0.8547794117647058) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+.eliminar_elements{
+    background-color: $card_surface;
+    border: 1px solid $border;
+    border-radius: 16px;
+    color: $blanco;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.title{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.icon{
+    width: 8rem;
+}
+
+.btns_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.btns{
+    font-size: 1.7rem;
+    width: 15rem;
+    height: 4rem;
+    border-radius: 8px;
+    border: 1px solid $border;
+    cursor: pointer;
+    &.cancelar{
+        background-color: $dark_color;
+        color: $blanco;
+        &:hover{
+            background-color: $main_color;
+            color: $negro;
+        }
+    }
+    &.eliminar{
+        background-color: red;
+        color: $blanco;
+        &:hover{
+            background-color: $rojo;
+        }
+    }
+}
+

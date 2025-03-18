@@ -1,0 +1,61 @@
+@import '../../styles.scss';
+
+// .options_container {
+//     // background-color: $aside_surface;
+//     height: 100%;
+//     // border-radius: 8px;
+//     display: flex;
+//     // align-items: center;
+//     justify-content: center;
+// }
+
+.options_elements {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 20rem;
+    height: 100%;
+    background-color: $aside_surface;
+}
+
+.links_options {
+    background-color: $bg_blur;
+    text-decoration: none;
+    color: $negro;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 1px solid $border;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 15rem;
+
+    &:hover {
+        background-color: $button_color;
+    }
+
+}
+
+.social_container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+.imgSocial {
+    width: 4rem;
+}
+
+.icon {
+    padding: 0;
+    margin: 0;
+}

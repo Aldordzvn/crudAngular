@@ -1,0 +1,17 @@
+<div class="add_container">
+    <div class="add_elements">
+        <h1 class="title">Agregar Producto</h1>
+        <form action="" class="form">
+            <label for="nombreProducto" class="label">Nombre del Producto:</label>
+            <input type="text" class="input" name="nombreProducto" placeholder="Introduce el Nombre del Producto">
+            <label for="marcaProducto" class="label">Marca del Producto:</label>
+            <input type="text" class="input" name="marcaProducto" placeholder="Introduce la marca del Producto">
+            <label for="descripcion" class="label">Descripción del producto: </label>
+            <textarea name="descripcion" id=""></textarea>
+        </form>
+        <div class="btns_container">
+            <button class="btn guardar">Guardar</button>
+            <button class="btn cancelar" [routerLink]="['/productos']">Cancelar</button>
+        </div>
+    </div>
+</div>

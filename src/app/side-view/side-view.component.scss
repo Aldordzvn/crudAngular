@@ -1,0 +1,36 @@
+@import '../../styles.scss';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    color: $blanco;
+    font-size: 4rem;
+    margin: 0;
+    margin-bottom: 3rem;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.addBtn{
+    border-radius: 8px;
+    border: 1px solid $border;
+    background-color: $button_color;
+    color: $negro;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        background-color: $blanco;
+    }
+}
+
+.icon{
+    width: 2.4rem;
+}

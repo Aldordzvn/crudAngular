@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'normalize.css/normalize';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+$main_color: #00eeff;
+$text_color: #b9f9ff;
+$button_color: #73f3ff;
+$dark_color: #0a0f0f;
+$card_surface: #232626;
+$icon_card: #8ef5ff;
+$aside_surface: #232626;
+$blanco: #fff;
+$border: #535555;
+$bg_blur: #5c9298;
+$negro: #000;
+$rojo: #ff623e;
+$green: #75ff5f;
+
+// TAMAÑO MEDIA QUERIES
+$telefono: 480px;
+$tablet: 768px;
+$tabletLimit: 960px;
+$desktop: 1024px;
+$desktop_comun: 1537px;
+$full_HD: 1920px;
+
+// FUENTES
+$main_font: "Oswald", sans-serif;
+
+// CAMBIOS GLOBALES
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    // position: relative;
+    // // display: flex;
+    // // flex-direction: column;
+    // height: 100vh;
+    // // justify-content: space-between;
+    background-color: $bg_blur;
+    font-family: $main_font;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+// Mixins
+
+@mixin telefono {
+    @media(min-width: $telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktopFullHD {
+    @media(min-width: $desktop_comun) {
+        @content;
+    }
+}
