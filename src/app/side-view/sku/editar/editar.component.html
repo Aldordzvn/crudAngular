@@ -1,0 +1,21 @@
+<div class="editar_container">
+    <div class="container_elements">
+        <p class="titulo">AGREGAR SKU</p>
+        <form class="form" action="">
+            <label class="label" for="sku">SKU:</label>
+            <input class="input sku" type="text" name="sku" placeholder="Introduce el SKU">
+            <label class="label" for="producto">PRODUCTO:</label>
+            <select class="select producto" name="producto" id="">
+                <option value="" class="opcSelect">T-Shirt</option>
+                <option value="" class="opcSelect">T-Shirt</option>
+                <option value="" class="opcSelect">T-Shirt</option>
+            </select>
+            <label class="label" for="cantidad">CANTIDAD:</label>
+            <input class="input cantidad" type="number" name="cantidad" placeholder="Introduce el numero de cajas">
+        </form>
+        <div class="btn_container">
+            <button class="btn guardar">Guardar</button>
+            <button class="btn cancelar" [routerLink]="['/administracion']">Cancelar</button>
+        </div>
+    </div>
+</div>

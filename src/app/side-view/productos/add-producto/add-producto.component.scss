@@ -1,0 +1,89 @@
+@import '../../../../styles.scss';
+
+.add_container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(10, 15, 15);
+    background: linear-gradient(90deg, rgba(10, 15, 15, 0.8547794117647058) 100%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_elements{
+    background-color: $card_surface;
+    border: 1px solid $border;
+    max-width: 50rem;
+    width: 90%;
+    height: 50rem;
+    padding: 3rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $blanco;
+}
+
+.title{
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem;
+    gap: 1rem;
+}
+
+.label{
+    font-size: 2.5rem;
+    color: $blanco;
+}
+
+.input{
+    height: 3.4rem;
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 0 0 0 1rem;
+    font-size: 1.4rem;
+}
+
+.btns_container{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 0 0 0;
+    padding: 0 5rem;
+    gap: 1rem;
+}
+
+.btn{
+    height: 3.5rem;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid $border;
+    cursor: pointer;
+    &.guardar{
+        background-color: #1dcb1d;
+        &:hover{
+            background-color: #52fc3f;
+        }
+    }
+
+    &.cancelar{
+        background-color: red;
+        &:hover{
+            background-color: $rojo;
+        }
+    }
+}
+

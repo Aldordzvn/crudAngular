@@ -1,0 +1,50 @@
+<div class="sku_container">
+    <div class="header">
+        <p class="title">Administración de SKU</p>
+        <button class="addBtn" [routerLink]="['/administracion/guardar']"><img class="icon add" [src]="iconImg" alt="Icono add">Añadir SKU</button>
+    </div>
+    <div class="sku_elements">
+        <ul>
+            <li>
+                <div class="sku_element">
+                    <p class="sku_code">SKU19982</p>
+                    <div class="product_part">
+                        <p class="product_name">T-Shirts</p>
+                        <button class="detailBtn" [routerLink]="['/administracion/detalles']">Detalles</button>
+                    </div>
+                </div>
+                <div class="opc_btns">
+                    <button class="btn editBtn" [routerLink]="['/administracion/guardar']">Editar</button>
+                    <button class="btn deleteBtn" [routerLink]="['/administracion/eliminar']">Eliminar</button>
+                </div>
+            </li>
+            <li>
+                <div class="sku_element">
+                    <p class="sku_code">SKU19982</p>
+                    <div class="product_part">
+                        <p class="product_name">T-Shirts</p>
+                        <button class="detailBtn">Detalles</button>
+                    </div>
+                </div>
+                <div class="opc_btns">
+                    <button class="btn editBtn">Editar</button>
+                    <button class="btn deleteBtn">Eliminar</button>
+                </div>
+            </li>
+            <li>
+                <div class="sku_element">
+                    <p class="sku_code">SKU19982</p>
+                    <div class="product_part">
+                        <p class="product_name">Pantalones</p>
+                        <button class="detailBtn">detalles</button>
+                    </div>
+                </div>
+                <div class="opc_btns">
+                    <button class="btn editBtn">Editar</button>
+                    <button class="btn deleteBtn">Eliminar</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<router-outlet></router-outlet>
