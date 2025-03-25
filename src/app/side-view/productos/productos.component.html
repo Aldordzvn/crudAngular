@@ -5,154 +5,22 @@
             <button class="addBtn" [routerLink]="['/productos/guardar']"><img class="icon add" [src]="iconImg" alt="Icono add" >Añadir producto</button>
         </div>
         <ul class="ul_products">
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <button class="btnDelete" [routerLink]="['/productos/eliminar']">
-                            <img class="icon delete" [src]="deleteImg" alt="Delete Icon" >
-                        </button>
+            @for (item of productoVista; track productoVista) {
+                <li class="li_products">
+                    <div class="li_element">
+                        <img [src]="itemImg" alt="Item Producto" class="icon item">
+                        <p class="name_product">{{item.nombre}} </p>
+                        <p class="marca_product">{{item.marca}}</p>
+                        <p class="descripcion_product">{{item.descripcion}} </p>
+                        <div class="delete_container">
+                            <button class="btnDelete" [routerLink]="['/productos/eliminar']" [queryParams]="{id: item.id, nombre: item.nombre, marca: item.marca}">
+                                <img class="icon delete" [src]="deleteImg" alt="Delete Icon" >
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde odit
-                        quia sint. Aut, harum in, adipisci accusamus sed </p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                    </div>
-                </div>
-            </li>
-            <li class="li_products">
-                <div class="li_element">
-                    <img [src]="itemImg" alt="Item Producto" class="icon item">
-                    <p class="name_product">Pantalones</p>
-                    <p class="marca_product">American Eagle</p>
-                    <p class="descripcion_product">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui cumque
-                        ut labore accusantium commodi veniam nulla eveniet incidunt perferendis</p>
-                    <div class="delete_container">
-                        <button>
-                            <img class="icon delete" [src]="deleteImg" alt="Delete Icon">
-                        </button>
-                    </div>
-                </div>
-            </li>
+                </li>
+            }
+            
         </ul>
     </div>
 </div>

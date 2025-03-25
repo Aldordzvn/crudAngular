@@ -69,3 +69,9 @@ body {
         @content;
     }
 }
+
+@mixin blur{
+    background: rgb(10, 15, 15);
+    background: linear-gradient(90deg, rgba(10, 15, 15, 0.8547794117647058) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
