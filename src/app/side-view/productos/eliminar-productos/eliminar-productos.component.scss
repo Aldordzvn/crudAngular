@@ -33,6 +33,10 @@
 
 .icon{
     width: 8rem;
+
+    &.warning{
+        width: 12rem;
+    }
 }
 
 .btns_container{
@@ -64,5 +68,37 @@
             background-color: $rojo;
         }
     }
+    &.warning{
+        margin: 3rem 0 0 0;
+    }
 }
 
+.alert_content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_alert-group{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.title-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.descSkus{
+    font-size: 3rem;
+    padding: 0;
+    margin: 0
+}
+
+.productosRepetidos_li{
+    font-size: 1.7rem;
+}

@@ -1,10 +1,30 @@
 <div class="eliminar_container">
     <div class="eliminar_elements">
+        @if (alerta) {
+        <div class="alert_content">
+            <div class="content_alert-group">
+                <img [src]="warningImg" alt="Warning Icon" class="icon warning">
+
+                <div class="title-group">
+                    <p class="descSkus">Este elemento aparace en:</p>
+                    @for(item of llaves; track item){
+                    <li class="productosRepetidos_li">{{item}}</li>
+                    }
+                </div>
+            </div>
+
+            <button class="btns eliminar warning" [routerLink]="['/productos']">CANCELAR</button>
+
+
+        </div>
+        }@else {
         <h1 class="title">¿Estas seguro que quieres eliminar este elemento?</h1>
         <img [src]="eliminarImg" alt="icono Eliminar" class="icon delete">
         <div class="btns_container">
             <button class="btns cancelar" [routerLink]="['/productos']">Cancelar</button>
             <button class="btns eliminar" (click)="eliminarProducto()">Eliminar</button>
         </div>
+        }
+
     </div>
 </div>

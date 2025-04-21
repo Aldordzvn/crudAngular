@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { SkuService } from '../../../sku.service';
 
 @Component({
   selector: 'app-eliminar',
@@ -9,5 +10,18 @@ import { RouterModule } from '@angular/router';
 })
 export class EliminarComponent {
   eliminarImg = 'img/delete_model.svg';
+  llaveSku!: string;
+
+  constructor(private route:ActivatedRoute, private skuService:SkuService, private router:Router){}
+
+  ngOnInit(){
+    this.llaveSku = this.route.snapshot.queryParams['llave'];  
+    console.log(this.llaveSku);
+  }
+
+  eliminarRegistro(){
+    this.skuService.eliminarSkus(this.llaveSku);
+    this.router.navigate(['administracion']);
+  }
 
 }
