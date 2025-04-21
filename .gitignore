@@ -41,4 +41,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# Archivo Service
+src/app/datos.service.ts
+src/app/firebaseapp.service.ts
+
 
