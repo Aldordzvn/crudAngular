@@ -5,15 +5,15 @@
             <button class="addBtn" [routerLink]="['/productos/guardar']"><img class="icon add" [src]="iconImg" alt="Icono add" >Añadir producto</button>
         </div>
         <ul class="ul_products">
-            @for (item of productoVista; track productoVista) {
+            @for (llave of obtenerLlaves(); track llave) {
                 <li class="li_products">
                     <div class="li_element">
                         <img [src]="itemImg" alt="Item Producto" class="icon item">
-                        <p class="name_product">{{item.nombre}} </p>
-                        <p class="marca_product">{{item.marca}}</p>
-                        <p class="descripcion_product">{{item.descripcion}} </p>
+                        <p class="name_product">{{productosVista[llave].nombre}} </p>
+                        <p class="marca_product">{{productosVista[llave].marca}}</p>
+                        <p class="descripcion_product">{{productosVista[llave].descripcion}} </p>
                         <div class="delete_container">
-                            <button class="btnDelete" [routerLink]="['/productos/eliminar']" [queryParams]="{id: item.id, nombre: item.nombre, marca: item.marca}">
+                            <button class="btnDelete" [routerLink]="['/productos/eliminar']" [queryParams]="{llave:llave}">
                                 <img class="icon delete" [src]="deleteImg" alt="Delete Icon" >
                             </button>
                         </div>

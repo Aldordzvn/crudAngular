@@ -1,21 +1,41 @@
 <div class="editar_container">
     <div class="container_elements">
-        <p class="titulo">AGREGAR SKU</p>
-        <form class="form" action="">
+        @if(!id){
+            <p class="titulo">AGREGAR SKU</p>
+        }@else{
+            <p class="titulo">EDITAR SKU</p>
+        }
+        <form #f="ngForm" class="form" (submit)="guardarSku(f)">
             <label class="label" for="sku">SKU:</label>
-            <input class="input sku" type="text" name="sku" placeholder="Introduce el SKU">
+            <input #claseInputSku class="input sku" type="text" name="sku" placeholder="Introduce el SKU" [(ngModel)]="sku" required minlength="7" maxlength="16" [disabled]="editDisabled" >
             <label class="label" for="producto">PRODUCTO:</label>
-            <select class="select producto" name="producto" id="">
-                <option value="" class="opcSelect">T-Shirt</option>
-                <option value="" class="opcSelect">T-Shirt</option>
-                <option value="" class="opcSelect">T-Shirt</option>
+            <select class="select producto" name="producto" [(ngModel)]="llaveProducto" required>
+                <option disabled>-- OPCIONES --</option>
+                @for (llave of obtenerLlaves(); track llave) {
+                    <option [value]="llave" name="opcion">{{productosLista[llave].nombre}} </option>
+                }
             </select>
             <label class="label" for="cantidad">CANTIDAD:</label>
-            <input class="input cantidad" type="number" name="cantidad" placeholder="Introduce el numero de cajas">
+            <input class="input cantidad" type="number" name="cantidad" placeholder="Introduce el numero de cajas" [(ngModel)]="cantidad" required minlength="1" maxlength="3">
+            <div class="btn_container">
+                <button type="submit" class="btn guardar">Guardar</button>
+                <button class="btn cancelar" [routerLink]="['/administracion']">Cancelar</button>
+            </div>
         </form>
-        <div class="btn_container">
-            <button class="btn guardar">Guardar</button>
-            <button class="btn cancelar" [routerLink]="['/administracion']">Cancelar</button>
-        </div>
     </div>
+    @if (alerta) {
+        <div class="alert_container">
+            <div class="alert_elements">
+                <img class="icon warning" [src]="warningImg" alt="Warning Icon">
+                <button class="btn_close" (click)="toggleAlerta()"><img class="icon close" [src]="closeImg" alt="Warning Icon"></button>
+                <p class="alert-title">
+                    @if(skuEncontrado){
+                        El Sku ya existe, intente otra vez
+                    }@else{
+                        Inserte correctamente todos los datos
+                    }
+                </p>
+            </div>
+        </div>
+    }
 </div>

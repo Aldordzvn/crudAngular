@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Producto } from '../producto.model';
 import { ProductosService } from '../../../productos.service';
 
@@ -18,18 +18,24 @@ export class AddProductoComponent {
   descripcion: string = '';
   index!: number;
   alerta: boolean = false;
+  llaveProducto: string | null = null;
 
-  constructor(private productoService: ProductosService, private route: Router) { }
 
-  // addProducto(event: Event){
-  //   if(this.nombre && this.marca && this.descripcion){
-  //     const producto: Producto = new Producto(this.nombre, this.marca, this.descripcion);
-  //     this.productoService.addProducto(producto);
-  //     this.route.navigate(['productos']);
-  //   }else{
-  //     this.alerta = true;
-  //   }
-  // }
+  constructor(private productoService: ProductosService, private route: Router, private activatedRouter: ActivatedRoute) { }
+
+  
+  ngOnInit(){
+    const llave = this.activatedRouter.snapshot.paramMap.get('llave');
+    if(llave){
+      const producto = this.productoService.getProductoByLlave(llave);
+      if(producto){
+        this.llaveProducto = llave;
+        this.descripcion = producto.descripcion;
+        this.nombre = producto.nombre;
+        this.marca = producto.marca;
+      }
+    }
+  }
 
   toggleAlerta(){
     this.alerta = !this.alerta;
@@ -38,11 +44,18 @@ export class AddProductoComponent {
   addProducto(form: NgForm) {
     if (!form.valid) {
       this.alerta = true;
+      this.limpiarFormulario();
     } else {
-      const producto: Producto = new Producto(this.index, this.nombre, this.marca, this.descripcion);
-      this.productoService.addProducto(producto);
-      this.route.navigate(['productos']);
+       const producto: Producto = new Producto(this.nombre,this.marca,this.descripcion);
+       this.productoService.guardarProducto(producto, this.llaveProducto);
+       this.route.navigate(['/productos']);
     }
+  }
+
+  limpiarFormulario(){
+    this.nombre = '';
+    this.marca = '';
+    this.descripcion = '';
   }
 
 

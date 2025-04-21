@@ -4,7 +4,7 @@
         <img [src]="eliminarImg" alt="icono Eliminar" class="icon delete">
         <div class="btns_container">
             <button class="btns cancelar" [routerLink]="['/administracion']" >Cancelar</button>
-            <button class="btns eliminar">Eliminar</button>
+            <button class="btns eliminar" (click)="eliminarRegistro()">Eliminar</button>
         </div>
     </div>
 </div>

@@ -1,49 +1,26 @@
 <div class="sku_container">
     <div class="header">
         <p class="title">Administración de SKU</p>
-        <button class="addBtn" [routerLink]="['/administracion/guardar']"><img class="icon add" [src]="iconImg" alt="Icono add">Añadir SKU</button>
+        <button class="addBtn" [routerLink]="['/administracion/guardar']"><img class="icon add" [src]="iconImg"
+                alt="Icono add">Añadir SKU</button>
     </div>
     <div class="sku_elements">
         <ul>
+            @for (item of obtenerLlaves(); track item) {
             <li>
                 <div class="sku_element">
-                    <p class="sku_code">SKU19982</p>
+                    <p class="sku_code"> {{skusVista[item].sku}}</p>
                     <div class="product_part">
-                        <p class="product_name">T-Shirts</p>
-                        <button class="detailBtn" [routerLink]="['/administracion/detalles']">Detalles</button>
+                        <p class="product_name">{{skusVista[item].producto}} </p>
+                        <button class="detailBtn" [routerLink]="['/administracion/detalles']" [queryParams]="{llave:item, cantidad: skusVista[item].cantidad, llaveP:skusVista[item].llaveProducto}">Detalles</button>
                     </div>
                 </div>
                 <div class="opc_btns">
-                    <button class="btn editBtn" [routerLink]="['/administracion/guardar']">Editar</button>
-                    <button class="btn deleteBtn" [routerLink]="['/administracion/eliminar']">Eliminar</button>
+                    <button class="btn editBtn" [routerLink]="['/administracion/guardar']" [queryParams]="{llave:item}">Editar</button>
+                    <button class="btn deleteBtn" [routerLink]="['/administracion/eliminar']" [queryParams]="{llave:item}">Eliminar</button>
                 </div>
             </li>
-            <li>
-                <div class="sku_element">
-                    <p class="sku_code">SKU19982</p>
-                    <div class="product_part">
-                        <p class="product_name">T-Shirts</p>
-                        <button class="detailBtn">Detalles</button>
-                    </div>
-                </div>
-                <div class="opc_btns">
-                    <button class="btn editBtn">Editar</button>
-                    <button class="btn deleteBtn">Eliminar</button>
-                </div>
-            </li>
-            <li>
-                <div class="sku_element">
-                    <p class="sku_code">SKU19982</p>
-                    <div class="product_part">
-                        <p class="product_name">Pantalones</p>
-                        <button class="detailBtn">detalles</button>
-                    </div>
-                </div>
-                <div class="opc_btns">
-                    <button class="btn editBtn">Editar</button>
-                    <button class="btn deleteBtn">Eliminar</button>
-                </div>
-            </li>
+            }
         </ul>
     </div>
 </div>
