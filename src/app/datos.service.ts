@@ -8,7 +8,7 @@ import { Sku } from './side-view/sku/sku.model';
   providedIn: 'root'
 })
 export class DatosService {
-  url = 'https://crud-angular-adca9-default-rtdb.firebaseio.com/';
+  url = 'No hay url en el repo';
 
   constructor(private httpClient: HttpClient) { }
 
