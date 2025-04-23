@@ -54,7 +54,6 @@ export class EditarComponent {
     this.productoService.listarProductos().subscribe((productos: {[llave:string]: Producto}) => {
       this.productosLista = productos;
       this.productoService.setProductos(productos);
-      // console.log(this.productosVista);
     });
   }
 
@@ -152,86 +151,7 @@ export class EditarComponent {
         }else{
           console.error(`No se encontro el registro : ${registro}`);
         }
-
       }
-
-      //  const producto: Producto = new Producto(this.nombre,this.marca,this.descripcion);
-      //  this.productoService.guardarProducto(producto, this.llaveProducto);
-      //  this.route.navigate(['/productos']);
     }
   }
-
-
-
-
-
-
-
-
-  // obtenerProducto(idProducto: number) {
-    // const productoEncontrado = this.productosLista.find(p => p.id === idProducto);
-
-  //   if (productoEncontrado) {
-  //     this.productoObjeto = productoEncontrado;
-  //     console.log("Entre al obtenerProducto con true");
-  //     return this.productoObjeto;
-  //   } else {
-  //     console.error(`${typeof (this.opcValue)} : No se encontro el objeto`);
-  //     return null;
-  //   }
-  // }
-
-  // obtenerSkuInfo(idSku: number){
-  //   const idSkuBuscado = this.skuContainer.find(p => p.id === idSku);
-  //   if(idSkuBuscado){
-  //     this.skuObjeto = idSkuBuscado;
-  //     return this.skuObjeto;
-  //   }else{
-  //     console.error("No se encontro el objeto");
-  //     return null;
-  //   }
-  // }
-
-  // saveInfo(form: NgForm) {
-  //   if (!form.valid) {
-  //     alert("Conteste bien cabron");
-  //     console.log("si entro");
-  //   } else {
-  //     if (!this.id) {
-  //       let id = 0;
-  //       let productoObjeto = this.obtenerProducto(Number(this.opcValue));
-  //       let productoNombre = productoObjeto?.nombre;
-  //       if (productoNombre) {
-  //         console.log(`${id}, ${this.opcValue}, ${productoNombre}, ${this.sku}, ${this.cantidad}`);
-  //         let sku: Sku = new Sku(id, productoNombre, this.opcValue, this.sku, this.cantidad);
-  //         this.skuService.addSku(sku);
-  //         this.route.navigate(['/administracion']);
-  //       } else {
-  //         alert("Algo salio mal intentelo de nuevo");
-  //         console.log(`${id}, ${this.opcValue}, ${productoNombre}, ${this.sku}, ${this.cantidad}`);
-
-  //       }
-  //     }else{
-  //       let skuObjeto = this.obtenerSkuInfo(Number(this.id));
-  //       if(skuObjeto){
-  //         this.skuService.editSku(skuObjeto);
-  //         this.route.navigateByUrl('/Administracion', {skipLocationChange: true}).then(() => this.route.navigate(['/guardar']));
-  //       }else{
-  //         console.error(`No se encontro el objeto de SKU desde SaveInfo(): ${skuObjeto}`);
-  //       }
-
-  //     }
-  //   }
-  // }
-
-  // llenarInfo(){
-  //   const skuObjeto = this.obtenerSkuInfo(Number(this.id));
-  //   if(skuObjeto){
-  //     this.sku = skuObjeto.sku;
-  //     this.opcValue = skuObjeto.id_producto;
-  //     this.cantidad = skuObjeto.cantidad;
-  //   }else{
-  //     console.error(`No se encontro el objeto desde llenarInfo(): ${skuObjeto}`);
-  //   }
-  // }
 }

@@ -57,6 +57,4 @@ export class AddProductoComponent {
     this.marca = '';
     this.descripcion = '';
   }
-
-
 }

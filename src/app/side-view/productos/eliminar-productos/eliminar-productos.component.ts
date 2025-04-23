@@ -60,5 +60,4 @@ export class EliminarProductosComponent {
     this.productoService.eliminarProducto(this.llave);
     this.router.navigate(['productos']);
   }
-
 }

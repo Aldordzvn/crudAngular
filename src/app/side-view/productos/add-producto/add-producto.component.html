@@ -2,7 +2,6 @@
     <div class="add_elements">
         <h1 class="title">Agregar Producto</h1>
         <form class="form" #f="ngForm" (submit)="addProducto(f)">
-            <!-- <input type="hidden" [(ngModel)]="index" name="inputOb" value="0"> -->
             <label for="nombreProducto" class="label">Nombre del Producto:</label>
             <input type="text" class="input" name="nombreProducto" [(ngModel)]="nombre"
                 placeholder="Introduce el Nombre del Producto" maxlength="70" required>
