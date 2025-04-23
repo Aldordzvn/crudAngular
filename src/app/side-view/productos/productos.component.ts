@@ -16,7 +16,6 @@ export class ProductosComponent {
   productosVista: {[llave:string]: Producto} = {};
   productosSubscription: Subscription | null = null;
   productosArray! : Producto;
-  // objectKeys = Object.keys;
   itemImg = 'img/item.svg';
   deleteImg = 'img/delete.svg';
   iconImg = 'img/add.svg';
@@ -34,7 +33,6 @@ export class ProductosComponent {
     this.productoService.listarProductos().subscribe((productos: {[llave:string]: Producto}) => {
       this.productosVista = productos;
       this.productoService.setProductos(productos);
-      // console.log(this.productosVista);
     });
   }
 
@@ -44,8 +42,4 @@ export class ProductosComponent {
     }
     return[];
   }
-
-
-
-  
 }

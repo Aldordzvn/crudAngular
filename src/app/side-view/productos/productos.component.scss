@@ -1,18 +1,15 @@
 @import '../../../styles.scss';
 
-p{
+p {
     color: $blanco;
 }
 
-.productos_elements{
-}
-
-.header{
+.header {
     display: flex;
     justify-content: space-between;
 }
 
-.title{
+.title {
     color: $blanco;
     font-size: 4rem;
     margin: 0;
@@ -21,7 +18,7 @@ p{
     text-transform: uppercase;
 }
 
-.addBtn{
+.addBtn {
     border-radius: 8px;
     border: 1px solid $border;
     background-color: $button_color;
@@ -33,12 +30,13 @@ p{
     height: 5rem;
     text-transform: uppercase;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: $blanco;
     }
 }
 
-.ul_products{
+.ul_products {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -50,7 +48,7 @@ p{
     height: 50rem;
 }
 
-.li_products{
+.li_products {
     width: 22rem;
     background-color: $card_surface;
     border: 1px solid $border;
@@ -58,61 +56,60 @@ p{
     padding: 1rem 2rem 2.5rem;
 }
 
-.li_element{
+.li_element {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.icon{
+.icon {
     width: 3rem;
     padding: 0;
     margin: 0;
-    &.delete{
+
+    &.delete {
         width: 2rem;
     }
-    &.add{
+
+    &.add {
         width: 2.4rem;
     }
 
 }
 
-.name_product{
+.name_product {
     font-size: 2rem;
     padding: 0;
     margin: 0.5rem 0 0.5rem 0;
 }
 
-.marca_product{
+.marca_product {
     margin: 0 0 1rem 0;
     font-size: 1.3rem;
 
 }
 
-.descripcion_product{
+.descripcion_product {
     font-size: 1.3rem;
     margin: 0;
 }
 
-.delete_container{
-    // border: 1px solid $border;
+.delete_container {
     margin: 1rem 0 0;
     padding: 0;
     text-align: end;
 }
 
-.btnDelete{
+.btnDelete {
     border: none;
     border-radius: 16px;
-    background-color: transparent;    
+    background-color: transparent;
     width: 5rem;
     padding: 0.5rem 0;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: $blanco;
     }
 }
-
-
-

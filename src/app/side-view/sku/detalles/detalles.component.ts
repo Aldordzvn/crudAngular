@@ -21,10 +21,6 @@ export class DetallesComponent {
   llaveSku: string = '';
   llaveProducto: string = '';
   cantidadSku!: number;
-  // id!: number;
-  // productoId!: number;
-  // producto!: string;
-  // productoObjeto!: Producto;
 
   constructor(private route: ActivatedRoute, private productoService: ProductosService) { }
 
@@ -32,36 +28,19 @@ export class DetallesComponent {
     this.llaveSku = this.route.snapshot.queryParams['llave'];
     this.llaveProducto = this.route.snapshot.queryParams['llaveP'];
     this.cantidadSku = this.route.snapshot.queryParams['cantidad'];
-    if (this.llaveProducto && this.cargarProductos() ) {
+    if (this.llaveProducto && this.cargarProductos()) {
       this.obtenerProducto(this.llaveProducto);
       console.log(this.productoDetalles[this.llaveProducto]);
     }
-    // this.productosSubscription = this.productoService.productosActualizados.subscribe((productos) => {
-    //   this.productoDetalles = productos;
-    // });
-
-    // // this.productoDetalles = this.productoService.productosContainer;
-    // this.id = Number(this.route.snapshot.queryParams['id']);
-    // this.cantidad = Number(this.route.snapshot.queryParams['cantidad']);
-    // this.productoId = Number(this.route.snapshot.queryParams['id_producto']);
-
-    // const productoEncontrado = this.productoDetalles.find(p => p.id === this.productoId);
-
-    // if(productoEncontrado){
-    //   this.productoObjeto = productoEncontrado;
-    // }else{
-    //   console.error("Producto no encontrado");
-    // }
-
   }
 
   cargarProductos() {
     this.productoService.listarProductos().subscribe((productos: { [llave: string]: Producto }) => {
       this.productoDetalles = productos;
       this.productoService.setProductos(productos);
-      if(this.llaveProducto){
+      if (this.llaveProducto) {
         this.obtenerProducto(this.llaveProducto);
-      }else{
+      } else {
         console.error(`No se encontro el objeto, llave: ${this.llaveProducto}`);
       }
     });

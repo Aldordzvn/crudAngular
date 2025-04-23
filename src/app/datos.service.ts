@@ -42,6 +42,4 @@ export class DatosService {
     console.log(`${url_modificar}`);
     return this.httpClient.put(url_modificar, registro);
   }
-
-  
 }
