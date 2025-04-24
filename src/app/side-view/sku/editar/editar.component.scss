@@ -158,3 +158,17 @@
     color: $blanco;
 }
 
+@include telefono{
+    .form{
+        padding: 0;
+    }
+
+    .alert_elements{
+        margin: 0 1rem;
+        padding: 3rem;
+    }
+
+    .alert-title{
+        text-align: center;
+    }
+}

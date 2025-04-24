@@ -66,3 +66,29 @@
     }
 }
 
+@include telefonoLimit{
+    .eliminar_elements{
+        margin: 0 1rem;
+    }
+}
+
+@include telefono{
+    .eliminar_elements{
+        padding: 3rem 1rem;
+        gap: 2.3rem;
+    }
+
+    .title{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .btns_container{
+        gap: 2rem;
+
+    }
+
+    .btns{
+        width: 12rem;
+    }
+}
