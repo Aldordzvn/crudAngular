@@ -42,7 +42,7 @@ testem.log
 Thumbs.db
 
 # Archivo Service
-/src/app/datos.service.ts
-/src/app/firebaseapp.service.ts
+src/app/datos.service.ts
+src/app/firebaseapp.service.ts
 
 
