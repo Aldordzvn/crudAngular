@@ -19,7 +19,7 @@ $green: #75ff5f;
 // TAMAÑO MEDIA QUERIES
 $telefono: 480px;
 $tablet: 768px;
-$tabletLimit: 960px;
+$tabletLimit: 878px;
 $desktop: 1024px;
 $desktop_comun: 1537px;
 $full_HD: 1920px;
@@ -48,7 +48,13 @@ body {
 // Mixins
 
 @mixin telefono {
-    @media(min-width: $telefono) {
+    @media(max-width: 320px) {
+        @content;
+    }
+}
+
+@mixin telefonoLimit{
+    @media (max-width: $telefono){
         @content;
     }
 }
@@ -59,14 +65,19 @@ body {
     }
 }
 
+@mixin limitTablet {
+    @media(max-width: $tabletLimit) {
+        @content;
+    }
+}
+
 @mixin desktopFullHD {
     @media(min-width: $desktop_comun) {
         @content;
     }
 }
 
-@mixin blur{
+@mixin blur {
     background: rgb(10, 15, 15);
     background: linear-gradient(90deg, rgba(10, 15, 15, 0.8547794117647058) 100%, rgba(0, 212, 255, 1) 100%);
 }
-

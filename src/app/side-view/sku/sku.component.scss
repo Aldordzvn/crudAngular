@@ -1,6 +1,10 @@
 @import '../../../styles.scss';
 
-.sku_container{
+.sku_elements{
+    max-height: 57rem;
+    height: 95%;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .header{
@@ -136,5 +140,48 @@ li{
             background-color: $blanco;
             color: red;
         }
+    }
+}
+
+@include limitTablet{
+    .sku_elements{
+        max-height: 99rem;
+        height: 95%;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+}
+
+@include tablet{
+    .sku_elements{
+        height: 90rem;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    }
+    .title{
+        font-size: 3.5rem;
+    }
+}
+
+@include telefonoLimit{
+    .sku_elements{
+        height: 63rem;
+    }
+    .header{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin: 2rem 0;
+        
+    }
+
+    .title{
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    li{
+        margin: 0;
+        padding: 0 2rem;
     }
 }
