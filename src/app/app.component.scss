@@ -20,3 +20,29 @@
     width: 100%;
     margin: 2rem 3rem;
 }
+
+@include limitTablet{
+    .vista{
+    }
+    .container_app{
+        display: block;
+    }
+
+    .container_components{
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+
+@include telefonoLimit{
+    .vista{
+        margin: 0;
+    }
+    .container_components{
+        flex-direction: column;
+    }
+}

@@ -50,3 +50,23 @@
     padding: 0;
     margin: 0;
 }
+
+
+
+@include telefonoLimit{
+    .options_elements{
+        flex-direction: row;
+        width: 100%;
+        height: 11rem;
+    }
+
+    .social_container{
+        display: none;
+    }
+}
+
+@media (max-width: 320px){
+    .links_options{
+        width: 14rem;
+    }
+}
