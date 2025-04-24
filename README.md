@@ -1,4 +1,13 @@
-# CrudAngular
+# Crud Angular | Inventario de SKU
+
+Aplicación Angular que gestiona un inventario de productos y SKUs.
+Permite agregar, editar y eliminar tanto productos como SKUs, básicamente operaciones CRUD. 
+Valida el buen ingreso de información en el formulario, duplicado de skus y relaciona productos con SKUs evitando la eliminación de un producto en caso de que haya un registro de SKU con él.
+Base de datos NoSQL  y Hosting desde Firebase.
+
+[DEMO VERSION] (https://crud-angular-adca9.web.app/)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
 
