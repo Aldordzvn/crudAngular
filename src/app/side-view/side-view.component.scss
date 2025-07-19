@@ -1,5 +1,13 @@
 @import '../../styles.scss';
 
+.container_views{
+    height: 100%;
+}
+
+.views_elements{
+    height: 100%;
+}
+
 .header{
     display: flex;
     justify-content: space-between;

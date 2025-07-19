@@ -1,18 +1,25 @@
 @import '../../../styles.scss';
 
-.sku_elements{
-    max-height: 57rem;
-    height: 95%;
+.sku_container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.sku_elements {
+    // max-height: 57rem;
+    // height: 95%;
     overflow-y: scroll;
     scrollbar-width: none;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
 }
 
-.title{
+.title {
     color: $blanco;
     font-size: 4rem;
     margin: 0;
@@ -21,7 +28,7 @@
     text-transform: uppercase;
 }
 
-.addBtn{
+.addBtn {
     border-radius: 8px;
     border: 1px solid $border;
     background-color: $button_color;
@@ -33,54 +40,57 @@
     height: 5rem;
     text-transform: uppercase;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: $blanco;
     }
 }
 
-.icon{
+.icon {
     width: 2.4rem;
 }
 
 
-ul{
+ul {
     margin: 0;
     padding: 0;
 }
-li{
+
+li {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     border-bottom: 1px solid $border;
     padding: 0 2rem 0 1rem;
-    &:last-child{
+
+    &:last-child {
         border: none;
     }
 }
 
-.product_part{
+.product_part {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
-.sku_element{
+.sku_element {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin: 1.5rem 0;
-    
+
 }
 
-.sku_code{
+.sku_code {
     color: $blanco;
     font-size: 2rem;
     text-transform: uppercase;
     margin: 0;
 }
 
-.product_name{
+.product_name {
     color: $blanco;
     font-size: 1.7rem;
     font-weight: 300;
@@ -88,7 +98,7 @@ li{
     text-transform: capitalize;
 }
 
-.detailBtn{
+.detailBtn {
     color: $blanco;
     border: 1px solid $border;
     background-color: $card_surface;
@@ -102,20 +112,21 @@ li{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background-color: $blanco;
         color: $negro;
     }
 }
 
-.opc_btns{
+.opc_btns {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-end;
 }
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,60 +138,86 @@ li{
     font-size: 1.5rem;
     text-transform: capitalize;
     cursor: pointer;
-    &.editBtn{
+
+    &.editBtn {
         background-color: $card_surface;
-        &:hover{
+
+        &:hover {
             background-color: $blanco;
             color: $negro;
         }
     }
-    &.deleteBtn{
+
+    &.deleteBtn {
         background-color: $rojo;
-        &:hover{
+
+        &:hover {
             background-color: $blanco;
             color: red;
         }
     }
 }
 
-@include limitTablet{
-    .sku_elements{
-        max-height: 99rem;
-        height: 95%;
+.my-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    &::ng-deep{
+        &.ngx-pagination{
+            margin: 0;
+            padding: 0;
+            a{
+                color: $border;
+            }
+        }
+        & li{
+            font-size: 2rem;
+        }
+    }
+}
+
+
+
+@include limitTablet {
+    .sku_elements {
         overflow-y: scroll;
         scrollbar-width: none;
     }
 }
 
-@include tablet{
-    .sku_elements{
-        height: 90rem;
+@include tablet {
+    .sku_elements {
         overflow-y: scroll;
         scrollbar-width: none;
     }
-    .title{
+
+    .title {
         font-size: 3.5rem;
     }
 }
 
-@include telefonoLimit{
-    .sku_elements{
+@include telefonoLimit {
+    .sku_elements {
         height: 63rem;
     }
-    .header{
+
+    .header {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
         margin: 2rem 0;
-        
+
     }
 
-    .title{
+    .title {
         font-size: 3rem;
         margin: 0;
     }
 
-    li{
+    li {
         margin: 0;
         padding: 0 2rem;
     }

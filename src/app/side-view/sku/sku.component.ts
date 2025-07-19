@@ -6,10 +6,12 @@ import { ProductosService } from '../../productos.service';
 import { Producto } from '../productos/producto.model';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import {NgxPaginationModule} from 'ngx-pagination'
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-sku',
-  imports: [RouterModule, FormsModule],
+  imports: [RouterModule, FormsModule, NgxPaginationModule, NgFor],
   templateUrl: './sku.component.html',
   styleUrl: './sku.component.scss'
 })
@@ -20,6 +22,7 @@ export class SkuComponent {
   skuListado: Sku[] = [];
   productoListado: Producto[] = [];
   id!: number;
+  page! : number;
 
   constructor(private skuService:SkuService, private productoService:ProductosService){}
 
