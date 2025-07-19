@@ -1,9 +1,24 @@
 # Crud Angular | Inventario de SKU
 
-Aplicación Angular que gestiona un inventario de productos y SKUs.
-Permite agregar, editar y eliminar tanto productos como SKUs, básicamente operaciones CRUD. 
-Valida el buen ingreso de información en el formulario, duplicado de skus y relaciona productos con SKUs evitando la eliminación de un producto en caso de que haya un registro de SKU con él.
-Base de datos NoSQL  y Hosting desde Firebase.
+Aplicación SPA (Single Page Application) desarrollada con Angular V19.
+El proyecto es un gestor de SKUs y productos, permite mostrar, añadir, editar y eliminar.
+
+### Tecnologías Utilizadas
+- **Angular 19**
+- **TypeScript**
+- **RxJS (Observables, BehaviorSubject)**
+- **Firebase Realtime Database**
+- **SCSS**
+- **Angular Standalone API**
+- **Angular Router**
+---
+
+### Funcionalidades
+- Operaciones CRUD tanto para productos como para SKUS
+- Validación para evitar SKUS duplicados
+- Comparte datos mediante services que consumen la API de FireBase para la base de datos
+- Paginación con ngx-pagination
+- Cuenta con base de datos no relacional en FireBase.
 
 [DEMO VERSION] (https://crud-angular-adca9.web.app/)
 
